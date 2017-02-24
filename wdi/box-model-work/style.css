@@ -1,0 +1,37 @@
+#container {
+  height: 500px;
+  width: 500px;
+  background-color: gray;
+  position: relative;
+}
+
+#hipster {
+  display: inline-block;
+}
+
+#square1 {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
+
+#square2 {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  display: inline-block;
+}
+
+#square3 {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  display: inline-block;
+}
+
+#square4 {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  display: inline-block;
+}
