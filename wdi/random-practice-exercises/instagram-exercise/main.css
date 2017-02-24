@@ -1,0 +1,118 @@
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+
+body {
+  font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+.main {
+  background: #46729A;
+  background: linear-gradient(#46729A, #1c5380);
+  height: 40%;
+  position: relative;
+}
+
+.phone-image {
+  float: left;
+  margin: 100px 50px 50px 20%;
+}
+
+.logo {
+  width: 200px;
+}
+
+.right-column {
+  width: 500px;
+  float: left;
+  margin-top: 110px;
+  position: relative;
+}
+
+.content {
+  display: block;
+  padding: 5px 20px 0 20px;
+  clear: both;
+  background-image: url('frame.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  float: left;
+}
+
+button {
+  float: right;
+  margin: 12px 8px 12px 0;
+  background-color:#658EB1;
+  color:white;
+  padding-bottom: 6px;
+  border-radius: 3px;
+}
+
+.top-banner {
+  display: block;
+  overflow:auto;
+  margin-bottom: 10px;
+}
+
+.content h2 {
+  color: #46729A;
+}
+
+.app-stores img {
+  margin: 10px 0 0 15px;
+}
+
+.footer {
+  clear: both;
+  padding-top: 5px;
+}
+
+li {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right: 5px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #1c5380;
+}
+
+#copywright {
+  color: gray;
+  margin-left: 10px;
+}
+
+ul {
+  text-align: center;
+}
+
+#home-icon {
+  width: 15px;
+  margin: 4px 5px 0 0;
+}
+
+
+/* Responsive design elements */
+
+@media only screen and (max-width: 728px) {
+  .phone-image {
+    display: none;
+  }
+  .logo {
+    margin-left: 20px;
+  }
+  button {
+    margin-right: 30px;
+  }
+  .right-column {
+    margin-top: 50px;
+  }
+  .main {
+    height: 25%;
+  }
+}
