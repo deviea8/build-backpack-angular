@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Modeling Exercise - Erin Martin</title>
+</head>
+<body>
+<h1>Data Modeling Exercise</h1>
+<h3>1. To-Do List</h3>
+<p>
+<strong>task</strong> = {<br>
+  taskName:<br>
+  taskDescription:<br>
+  taskOwner:<br>
+  taskStatus:<br>
+  hoursCompleted:<br>
+  hoursExpected:<br>
+  percentComplete:<br>
+};<br><br>
+<strong>project</strong> = {<br>
+  tasksRequired: [ , ]<br>
+  client:<br>
+  contractedHours:<br>
+  projectNotes:<br>
+  projectDescription:<br>
+};<br>
+<br>
+</p>
+<h3>2. Photo Sharing App</h3>
+<p>
+<strong>photo</strong> = {<br>
+  album:<br>
+  fileSize:<br>
+  photoDimensions:<br>
+  fileType:<br>
+  sharedWith: [ , ]<br>
+  viewPermissions:<br>
+  photoCaption:<br>
+};<br><br>
+<strong>album</strong> = {<br>
+  accountID:<br>
+  numberOfPhotos:<br>
+  albumTags: [ , ]<br>
+  albumName: <br>
+  albumDescription:<br>
+};<br>
+<br>
+</p>
+<h3>3. Home Automation</h3>
+<p>
+<strong>thermostat</strong> = {<br>
+  currentTemp:<br>
+  desiredTemp:<br>
+  preferredAvgTemp:<br>
+  degreeType:<br>
+};<br><br>
+<strong>lights</strong> = {<br>
+  lightsOn:<br>
+  lightsOnTime:<br>
+  lightsOutTime:<br>
+  rooms: [ , ]<br>
+};<br>
+<br>
+</p>
+<h3>4. Sneaker Store</h3>
+<p>
+<strong>product</strong> = {<br>
+  productCategory:<br>
+  productName:<br>
+  salePrice:<br>
+  brand:<br>
+  SKU:<br>
+  color:<br>
+  size:<br>
+};<br><br>
+<strong>cart</strong> = {<br>
+  purchaseComplete:<br>
+  itemsInCart: [ , ]<br>
+  cartIsSaved:<br>
+  userEmailAddress:<br>
+  userCookieID:<br>
+};<br>
+<br>
+</p>
+
+<h3>5. Subway System</h3>
+<p>
+<h4>Advantages</h4>
+<ul>
+  <li>Very thorough description of each station</li>
+  <li>Great for tourists and those unfamiliar with the area</li>
+  <li>Gives comprehensive view of each line and the stops it includes</li>
+</ul>
+<h4>Disadvantages</h4>
+<ul>
+  <li>Doesn't provide order of stops</li>
+  <li>Doesn't allow for calculation of number of stops between each station</li>
+  <li>No indication of where user currently is and is trying to get to</li>
+</ul>
+</p>
+<br><br>
+<h3>6. Doctor Appointment App</h3>
+<p>
+<h4>Option 1 - Advantages</h4>
+<ul>
+  <li>Works great if patient wants to see a specific doctor</li>
+  <li>Good for keeping track of available/unavailable time on each doctor's calendar</li>
+  <li>Places focus on the specific doctor over the specific need</li>
+</ul>
+<h4>Option 1 - Disadvantages</h4>
+<ul>
+  <li>Doesn't lend itself to viewing all available appointment times</li>
+  <li>Not able to select preferred gender of doctor</li>
+</ul>
+</p>
+<p>
+<h4>Option 2 - Advantages</h4>
+<ul>
+  <li>Appointment availability much easier to view in aggregate</li>
+  <li>Patients have more choice in selecting doctors that suit their needs</li>
+</ul>
+<h4>Option 2 - Disadvantages</h4>
+<ul>
+  <li>Doctors may get underbooked or overbooked</li>
+  <li>Lack of scheduling consistency across all doctors in the practice</li>
+</ul>
+</p>
+<p>
+<h4>Conclusion:</h4>
+<ul>
+  <li>Option 1 seems better suited for practices with only one doctor, or doctors that develop close relationships with their patients over time.</li>
+  <li>Option 2 seems better suited for emergency rooms or practices with multiple disciplines or that serve a wide variety of ailments.</li>
+</ul>
+</p>
+<br><br>
+<p>
+<h3>7. Tic-Tac-Toe</h4>
+<p>
+<strong>var player</strong> = {<br>
+  playerLetter: 'x',<br>
+  playerName: 'Erin'<br>
+};<br><br>
+<strong>var cell</strong> = {<br>
+  cellPosition: 3,<br>
+  occupiedBy: player<br>
+};<br>
+<br>
+</p>
+<p>
+<h4>Justify the choices.</h4>
+<ul>
+  <li>Because Tic-Tac-Toe is a simple game of x's and o's, these 2 entities allow for easy pairing of which cells are available, in play, and if so, which player occupies each.</li>
+  <li>If we know which cells are occupied by which player, we can then use JS to see if the cells in play (and by which player) are in the correct winning combinations to win the game.</li>
+</ul>
+</p>
+</body>
+</html>
