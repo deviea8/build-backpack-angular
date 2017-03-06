@@ -2,10 +2,39 @@ $(function() {
 
 $('.button-plus').on('click', checkIncrementItemType)
 $('.button-minus').on('click', checkDecrementItemType)
+$('.green-backpack').on('click', greenBackpackSelected)
+$('.blue-backpack').on('click', blueBackpackSelected)
+$('.purple-backpack').on('click', purpleBackpackSelected)
+$('.red-backpack').on('click', redBackpackSelected)
 
 })
 
-// Increment current item's quantity. Need help with this.
+
+
+var greenBackpackSelected = function() {
+  $('#backpack-image').css('background-image', 'url(http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=37069638)');
+  $('#tag').text('Green');
+  $('#backpack-type').text('Green Backpack');
+}
+
+var blueBackpackSelected = function() {
+  $('#backpack-image').css('background-image', 'url(https://s-media-cache-ak0.pinimg.com/736x/6f/0d/a4/6f0da48be5de51944ddc044cbff469cc.jpg)');
+  $('#tag').text('Blue');
+  $('#backpack-type').text('Blue Backpack');
+}
+
+var purpleBackpackSelected = function() {
+  $('#backpack-image').css('background-image', 'url(http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=68056220)');
+  $('#tag').text('Purple');
+  $('#backpack-type').text('Purple Backpack');
+}
+
+var redBackpackSelected = function() {
+  $('#backpack-image').css('background-image', 'url(http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=72028988)');
+  $('#tag').text('Red');
+  $('#backpack-type').text('Red Backpack');
+}
+
 
 var checkIncrementItemType = function() {
   incrementValue(this.value);
@@ -44,7 +73,8 @@ var incrementValue = function(itemType) {
 
 var checkDecrementItemType = function() {
   decrementValue(this.value);
-  console.log(this.value)
+  console.log(this.value);
+  updateOrderSummaryList(this.value);
 }
 
 var decrementValue = function(itemType) {
@@ -177,17 +207,27 @@ var itemCost = 2;
 
 var updateOrderSummaryList = function(itemType) {
   var currentItemQty = getItemQty(itemType);
-  if (currentItemQty === 1) {
-  var newListItem = $('<tr><td>' + itemType + '</td><td id = "' + itemType + '-quantity">' + getItemQty(itemType) + '</td><td id ="' + itemType + '-cost">' + getItemCost(itemType) + '</td></tr>');
-  newListItem.appendTo($('tbody'));
-}
-  if (currentItemQty > 1) {
-    var itemQtyId = document.getElementById(itemType + '-quantity');
-    itemQtyId.innerHTML = getItemQty(itemType);
-    var itemCostId = document.getElementById(itemType + '-cost');
-    itemCostId.innerHTML = getItemCost(itemType);
-  }
+  var itemQtyId = document.getElementById(itemType + '-qty');
+  itemQtyId.innerHTML = getItemQty(itemType);
+  var itemCostId = document.getElementById(itemType + '-cost');
+  itemCostId.innerHTML = getItemCost(itemType);
+  updateTotalCost();
 };
+
+var totalCost = 0;
+
+
+//Need to update this
+
+var updateTotalCost = function() {
+  totalCost = 0;
+  for (var i = 0; i < 9; i++) {
+    totalCost += parseFloat(document.getElementsByClassName('cost')[i].innerHTML);
+  }
+  $('.total-cost').text('$' + totalCost);
+}
+
+
 
 var itemCounts = {
   pencils: 0,
@@ -198,6 +238,6 @@ var itemCounts = {
   coloredPencils: 0,
   markers: 0,
   glueSticks: 0
-}
+};
 
 

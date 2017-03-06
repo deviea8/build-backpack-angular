@@ -14,7 +14,7 @@
 <body>
     <div class = "intro page-header">
     <img class = "logo" src = "bab-logo.png">
-      <p class = "intro-text">Customize a backpack with school supplies for the new year for students in need. Simply select the desired quantity of each item, then drag and drop the items listed on the left into the backpack. The right column will summarize the contents of your backpack and show you the total cost.</p>
+      <p class = "intro-text">Customize a backpack with school supplies for the new year for students in need. Simply select the quantity of each item you'd like to include, then select the color of the backpack. The right column will summarize the contents of your backpack and show you the total cost.</p>
     </div>
       <div class="row">
         <div class="items-1 col-md-4">
@@ -121,6 +121,7 @@
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span id="tag">Blue</span>
             <span class="caret"></span></button>
             <ul class="dropdown-menu">
+              <li><a class="blue-backpack">Blue</a></li>
               <li><a class="green-backpack">Green</a></li>
               <li><a class="purple-backpack">Purple</a></li>
               <li><a class="red-backpack">Red</a></li>
@@ -140,12 +141,57 @@
           <td><strong>QUANTITY</strong></td>
           <td><strong>COST</strong></td>
         </tr>
+        <tr>
+          <td id = "backpack-type">Blue Backpack</td>
+          <td><strong>1</strong></td>
+          <td class = 'cost'>6</td>
+        </tr>
+        <tr>
+          <td>Pencils</td>
+          <td id = 'pencils-qty'>0</td>
+          <td id = 'pencils-cost' class = 'cost'>0</td>
+        </tr>
+        <tr>
+          <td>Folders</td>
+          <td id = 'folders-qty'>0</td>
+          <td id = 'folders-cost' class = 'cost'>0</td>
+        </tr>
+        <tr>
+          <td>Notebooks</td>
+          <td id = 'notebooks-qty'>0</td>
+          <td id = 'notebooks-cost' class = 'cost'>0</td>
+        </tr>
+        <tr>
+          <td>Scissors</td>
+          <td id = 'scissors-qty'>0</td>
+          <td id = 'scissors-cost' class = 'cost'>0</td>
+        </tr>
+        <tr>
+          <td>Erasers</td>
+          <td id = 'erasers-qty'>0</td>
+          <td id = 'erasers-cost' class = 'cost'>0</td>
+        </tr>
+        <tr>
+          <td>Colored Pencils</td>
+          <td id = 'colored-pencils-qty'>0</td>
+          <td id = 'colored-pencils-cost' class = 'cost'>0</td>
+        </tr>
+        <tr>
+          <td>Markers</td>
+          <td id = 'markers-qty'>0</td>
+          <td id = 'markers-cost' class = 'cost'>0</td>
+        </tr>
+        <tr>
+          <td>Glue Sticks</td>
+          <td id = 'glue-sticks-qty'>0</td>
+          <td id = 'glue-sticks-cost' class = 'cost'>0</td>
+        </tr>
       </tbody>
       </table>
       <hr>
       <h5>TOTAL COST</h5>
-      <p class = "cost">$0</p>
-      <button class = "btn btn-default">Finalize</button>
+      <p class = "total-cost">$6</p>
+      <button class = "btn btn-primary">Finalize</button>
     </div>
   </div>
 </body>
