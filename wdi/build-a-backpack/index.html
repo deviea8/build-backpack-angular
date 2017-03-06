@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
 </head>
 <body>
     <div class = "intro page-header">
@@ -17,50 +18,50 @@
     </div>
       <div class="row">
         <div class="items-1 col-md-4">
-            <h4>Select supplies and quantity</h4>
+            <h4>1. Select supplies and quantity</h4>
           <div class="row">
             <div class="col-md-6">
               <div id = "pencils" class = "indiv-item"><span class = "item-name">Pencils</span>
                 <div class="input-group">
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">-</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-minus" value = "pencils">-</button>
                   </span>
-                  <input type = "text" name = "quant[1]" class = "input-sm" value = "0" min = "0" max = "10">
+                  <input type = "text" name = "pencil" class = "input-sm pencil-value" value = "0" min = "0" max = "10" readonly>
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">+</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-plus pencils" value = "pencils">+</button>
                   </span>
                 </div>
               </div>
               <div id = "folders" class = "indiv-item"><span class = "item-name">Folders</span>
                <div class="input-group">
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">-</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-minus" value = "folders">-</button>
                   </span>
-                  <input type = "text" name = "quant[1]" class = "input-sm" value = "0" min = "0" max = "10">
+                  <input type = "text" name = "quant[1]" class = "input-sm folder-value" value = "0" min = "0" max = "10" readonly>
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">+</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-plus folders" value = "folders">+</button>
                   </span>
                 </div>
               </div>
               <div id = "notebooks" class = "indiv-item"><span class = "item-name">Notebooks</span>
                  <div class="input-group">
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">-</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-minus" value = "notebooks">-</button>
                   </span>
-                  <input type = "text" name = "quant[1]" class = "input-sm" value = "0" min = "0" max = "10">
+                  <input type = "text" name = "quant[1]" class = "input-sm notebook-value" value = "0" min = "0" max = "10" readonly>
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">+</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-plus notebooks" value = "notebooks">+</button>
                   </span>
                 </div>
               </div>
               <div id = "scissors" class = "indiv-item"><span class = "item-name">Scissors</span>
                  <div class="input-group">
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">-</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-minus" value = "scissors">-</button>
                   </span>
-                  <input type = "text" name = "quant[1]" class = "input-sm" value = "0" min = "0" max = "10">
+                  <input type = "text" name = "quant[1]" class = "input-sm scissors-value" value = "0" min = "0" max = "10" readonly>
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">+</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-plus scissors" value = "scissors">+</button>
                   </span>
                 </div>
             </div>
@@ -69,44 +70,44 @@
               <div id = "eraser" class = "indiv-item"><span class = "item-name">Erasers</span>
                  <div class="input-group">
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">-</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-minus" value = "erasers">-</button>
                   </span>
-                  <input type = "text" name = "quant[1]" class = "input-sm" value = "0" min = "0" max = "10">
+                  <input type = "text" name = "quant[1]" class = "input-sm erasers-value" value = "0" min = "0" max = "10" readonly>
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">+</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-plus erasers" value = "erasers">+</button>
                   </span>
                 </div>
               </div>
               <div id = "colored-pencils" class = "indiv-item"><span class = "item-name">Colored Pencils</span>
                  <div class="input-group">
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">-</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-minus" value = "colored-pencils">-</button>
                   </span>
-                  <input type = "text" name = "quant[1]" class = "input-sm" value = "0" min = "0" max = "10">
+                  <input type = "text" name = "quant[1]" class = "input-sm colored-pencils-value" value = "0" min = "0" max = "10" readonly>
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">+</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-plus colored-pencils" value = "colored-pencils">+</button>
                   </span>
                 </div>
               </div>
               <div id = "markers" class = "indiv-item"><span class = "item-name">Markers</span>
                  <div class="input-group">
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">-</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-minus markers" value = "markers">-</button>
                   </span>
-                  <input type = "text" name = "quant[1]" class = "input-sm" value = "0" min = "0" max = "10">
+                  <input type = "text" name = "quant[1]" class = "input-sm markers-value" value = "0" min = "0" max = "10" readonly>
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">+</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-plus markers" value = "markers">+</button>
                   </span>
                 </div>
               </div>
               <div id = "glue-sticks" class = "indiv-item"><span class = "item-name">Glue Sticks</span>
                  <div class="input-group">
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">-</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-minus glue-sticks" value = "glue-sticks">-</button>
                   </span>
-                  <input type = "text" name = "quant[1]" class = "input-sm" value = "0" min = "0" max = "10">
+                  <input type = "text" name = "quant[1]" class = "input-sm glue-sticks-value" value = "0" min = "0" max = "10" readonly>
                   <span class = "input-group-btn">
-                    <button type = "button" class = "btn btn-xs btn-number" data-type = "minus">+</button>
+                    <button type = "button" class = "btn btn-xs btn-number button-plus glue-sticks" value = "glue-sticks">+</button>
                   </span>
                 </div>
               </div>
@@ -115,14 +116,14 @@
        </div>
 
       <div class = "backpack col-md-5">
-        <h4>Select backpack color</h4>
+        <h4>2. Select backpack color</h4>
           <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Blue
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span id="tag">Blue</span>
             <span class="caret"></span></button>
             <ul class="dropdown-menu">
-              <li><a href="#">HTML</a></li>
-              <li><a href="#">CSS</a></li>
-              <li><a href="#">JavaScript</a></li>
+              <li><a class="green-backpack">Green</a></li>
+              <li><a class="purple-backpack">Purple</a></li>
+              <li><a class="red-backpack">Red</a></li>
             </ul>
           </div>
 
@@ -133,19 +134,17 @@
       <h4>Order Summary</h4>
       <hr>
       <table>
+      <tbody>
         <tr>
-          <td><strong>Item</strong></td>
-          <td><strong>Quantity</strong></td>
-          <td><strong>Cost</strong></td>
+          <td><strong>ITEM</strong></td>
+          <td><strong>QUANTITY</strong></td>
+          <td><strong>COST</strong></td>
         </tr>
-        <tr>
-          <td>Pencils</td>
-          <td>2</td>
-          <td>$3</td>
-        </tr>
+      </tbody>
       </table>
       <hr>
       <h5>TOTAL COST</h5>
+      <p class = "cost">$0</p>
       <button class = "btn btn-default">Finalize</button>
     </div>
   </div>
