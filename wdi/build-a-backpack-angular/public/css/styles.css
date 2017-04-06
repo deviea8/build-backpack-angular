@@ -1,0 +1,170 @@
+
+.backpack {
+  text-align: center;
+  padding: 0 10px 0 10px;
+
+}
+
+.order-summary {
+  background: #ffedcc;
+  text-align: center;
+  padding-bottom: 30px;
+  margin-top: 20px;
+}
+
+.backpack #backpack-image {
+  height: 400px;
+  width: 300px;
+  background-image: url('/images/blue-sm.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.indiv-item {
+  height: 90px;
+  width: 150px;
+  background: pink;
+  padding: 5px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 15px;
+  border: 2px solid gray;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+table {
+   margin: auto;
+   font-size: 12px;
+   text-transform:capitalize;
+}
+
+td {
+  padding: 0 5px 0 5px;
+}
+
+
+.intro {
+  margin: 10px 150px 20px 30px;
+}
+
+
+.items-1 h4 {
+  margin-bottom: 20px;
+}
+
+.items-1 {
+  padding-left: 35px;
+}
+
+#pencils {
+  background: url('/images/pencils.jpg');
+  background-size: contain;
+}
+
+#eraser {
+  background: url('/images/erasers.jpg');
+  background-size: cover;
+}
+
+#folders {
+  background: url('/images/folders.jpg');
+  background-size: cover;
+}
+
+#colored-pencils {
+  background: url('/images/colored_pencils.jpg');
+  background-size: cover;
+}
+
+#notebooks {
+  background: url('/images/notebooks.jpeg');
+  background-size: cover;
+}
+
+#markers {
+  background: url('/images/markers.jpg');
+  background-size: cover;
+}
+
+#scissors {
+  background: url('/images/scissors.jpeg');
+  background-size: cover;
+}
+
+#glue-sticks {
+  background: url('/images/glue_sticks.jpg');
+  background-size: cover;
+}
+
+
+.input-sm {
+  text-align:center;
+  margin: auto;
+}
+
+.btn-xs {
+  margin: auto;
+  background: #A1F5A3;
+  color: black;
+}
+
+.dropdown-menu {
+  left: 50%;
+  right: auto;
+  text-align: center;
+  transform: translate(-50%, 0);
+}
+
+
+.intro-text {
+  background: #F0F0F0;
+  margin: 10px;
+  padding: 10px;
+}
+
+.indiv-item .input-sm {
+  color: black;
+}
+
+.item-name {
+  background: #FFC099;
+  padding: 0 3px 0 3px;
+}
+
+.input-group {
+  margin-top: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.row {
+  margin-left: 8px;
+}
+
+.hidden-field {
+  width: 100px;
+  margin: 0 auto;
+  visibility: hidden;
+}
+
+.back-to-list {
+  float: left;
+  position: absolute;
+}
+
+.back-to-list-button {
+  height: 25px;
+  font-size: 8px;
+}
+
+.total-cost-section {
+  background: #e0fde0;
+  padding: 4px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,13 @@
+<div class="items-1">
+    <h4>1. Select supplies and quantity</h4>
+  <div class="row">
+    <div ng-repeat="item in $ctrl.supplyList">
+      <div id="{{item.type}}" class="indiv-item form-group col-md-2"><span class="item-name"><label for="{{item.type}}">{{item.type | uppercase}}</label></span>
+        <div class="input-group">
+          <input type = "number" name="{{item.type}}" class="input-sm {{item.type}}-value" value="0" min="0" max="10">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
