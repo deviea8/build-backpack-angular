@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -94,15 +94,27 @@ module.exports = supplyListController;
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const angular = __webpack_require__(5);
+const angular = __webpack_require__(7);
 
 angular.module('backpackApp', []);
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var supplyListTemplate = __webpack_require__(6);
+var supplyListTemplate = __webpack_require__(8);
 var supplyListController = __webpack_require__(0);
 
 var SupplyListComponent = {
@@ -113,7 +125,7 @@ var SupplyListComponent = {
 angular.module('backpackApp').component('supplies', SupplyListComponent);
 
 /***/ }),
-/* 3 */
+/* 5 */
 /***/ (function(module, exports) {
 
 angular.module('backpackApp').service('SupplyService', SupplyService);
@@ -131,7 +143,7 @@ function SupplyService($http) {
 };
 
 /***/ }),
-/* 4 */
+/* 6 */
 /***/ (function(module, exports) {
 
 /**
@@ -33508,27 +33520,29 @@ $provide.value("$locale", {
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 5 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(4);
+__webpack_require__(6);
 module.exports = angular;
 
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"items-1\">\n    <h4>1. Select supplies and quantity</h4>\n  <div class=\"row\">\n    <div ng-repeat=\"item in $ctrl.supplyList\">\n      <div id=\"{{item.type}}\" class=\"indiv-item form-group col-md-2\"><span class=\"item-name\"><label for=\"{{item.type}}\">{{item.type | uppercase}}</label></span>\n        <div class=\"input-group\">\n          <input type = \"number\" name=\"{{item.type}}\" class=\"input-sm {{item.type}}-value\" value=\"0\" min=\"0\" max=\"10\">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
+module.exports = "<div class=\"items-1\">\n    <h4>1. Select supplies and quantity</h4>\n  <div class=\"row\">\n    <div ng-repeat=\"item in $ctrl.supplyList\">\n      <div id=\"{{item.type}}\" class=\"indiv-item form-group col-md-2\"><span class=\"item-name\"><label for=\"{{item.type}}\">{{item.type | uppercase}}</label></span>\n        <div class=\"input-group\">\n          <input type = \"number\" name=\"{{item.type}}\" class=\"input-sm {{item.type}}-value\" value=\"0\" min=\"0\" max=\"10\" ng-model=\"item.qty\">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
 __webpack_require__(2);
+__webpack_require__(3);
+__webpack_require__(4);
 __webpack_require__(0);
-module.exports = __webpack_require__(3);
+module.exports = __webpack_require__(5);
 
 
 /***/ })
